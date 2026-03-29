@@ -2,4 +2,219 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7c6956;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 50px; 
+}
+
+.toDoList{
+    background-color: #272626;
+    width: 600px;
+    max-width: 90%;
+    align-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+h1{
+    text-align: center;
+    color: azure;
+}
+
+.taskInput{
+    padding: 30px;    
+}
+#newTask {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#btnAdd{
+    width: 100%;
+    max-width: 100px;
+    height: 47px;
+    border-radius: 8px;
+    background-color: white;
+    transition: all 0.5s ease;
+    margin-top: 6px;
+    
+}
+
+#btnAdd:hover {
+  letter-spacing: 3px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: rgb(233, 157, 63) 0px 7px 29px 0px;
+}
+
+.taskList{
+    background-color: rgb(219, 214, 214);
+}
+
+#tasks li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px;
+    border: 2px solid #272626;
+    gap: 10px;
+    font-size: 20px;
+}
+
+#tasks li span {
+    font-size: 18px;
+    flex: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space:normal;
+}
+
+#tasks li .deleteBtn {
+    background-color: rgb(237, 208, 162);
+    font-size: 18px;        
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s;
+    display: flex;         
+    align-items: center;
+    justify-content: center;
+}
+.deleteBtn:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+.taskCheck {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.taskCheck:checked{
+    background-color: rgb(21, 36, 62);
+}
+
+.taskCheck:hover{
+    transform: scale(1.2);
+}
+
+
+.completedTasks{
+    color: azure;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #272626;
+    width: 600px;
+    max-width: 90%;
+    align-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#listCompleted li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    border-bottom: 1px;
+    border: 2px solid #272626;
+    background-color: rgb(219, 214, 214);
+    gap: 10px;
+    font-size: 20px;
+    color: #272626;
+}
+
+#listCompleted li span {
+    font-size: 18px;
+    flex: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space:normal;
+
+}
+
+#listCompleted li .deleteBtn {
+    background-color: rgb(237, 208, 162);
+    font-size: 18px;        
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s;
+    display: flex;         
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Estilo para responsive de tablets */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    .toDoList, .completedTasks{
+        width: 90%;
+    }
+
+    #newTask{
+        max-width: 100%;
+    }
+
+    .taskInput{
+        display: flex;
+        flex-direction: column;
+        gap:10px
+    }
+
+    #btnAdd{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Estilo para responsive de Celulares */
+
+@media (max-width: 480px){
+
+    body{
+        padding: 20px;
+    }
+
+    h1 {
+        font-size:20px
+    }
+
+    #tasks li, #listCompleted li{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #tasks li span, #listCompleted li span {
+        width: 100%;
+    }
+
+    .deleteBtn{
+        align-items: flex-end;
+    }
 }
