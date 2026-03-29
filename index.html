@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Mi TODO list</h1>
-    <script src="scripts/script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="toDoList">
+    <h1>The best To do list</h1>
+
+    <div class="taskInput">
+      <input type="text" id="newTask" placeholder="Agrega una tarea">
+      <button id="btnAdd" onclick="addTask()">Agregar</button>
+    </div>
+
+    <div class="taskList">
+      <ul id="tasks"></ul>
+    </div>
+
+  </div>
+
+  <div class = "completedTasks">
+
+      <h2>Tareas completadas</h2>
+      <ul id="listCompleted"></ul>
+
+  </div>
+
+
+
+  <script src="scripts/script.js"></script>
+</body>
+
 </html>
